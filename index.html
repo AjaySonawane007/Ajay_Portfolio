@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ajay Sonawane | Python Developer</title>
+  <meta name="description"
+    content="Portfolio of Ajay Sonawane, a Python Developer focused on Flask, FastAPI, REST APIs, MySQL and AI/ML fundamentals." />
+  <!-- Open Graph -->
+  <meta property="og:title" content="Ajay Sonawane | Python Developer" />
+  <meta property="og:description"
+    content="Portfolio of Ajay Sonawane, a Python Developer focused on Flask, FastAPI, REST APIs, MySQL and AI/ML fundamentals." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://ajaysonawane.dev" />
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <!-- GSAP + ScrollTrigger + TextPlugin -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/TextPlugin.min.js" defer></script>
+  <!-- Three.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js" defer></script>
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <!-- Custom Cursor -->
+  <div id="cursor" aria-hidden="true">
+    <div id="cursor-dot"></div>
+    <div id="cursor-ring"></div>
+  </div>
+
+  <!-- Scroll Progress Bar -->
+  <div id="scroll-progress" aria-hidden="true"></div>
+
+  <!-- ====== NAVBAR ====== -->
+  <nav id="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo" aria-label="Ajay Sonawane home">
+        <span class="logo-bracket">&lt;</span>AS<span class="logo-bracket">/&gt;</span>
+      </a>
+      <ul class="nav-links" role="list">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <a href="assets/resume.pdf" download class="nav-resume-btn" aria-label="Download Resume">
+        <span>Resume</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+          <polyline points="7 10 12 15 17 10" />
+          <line x1="12" y1="15" x2="12" y2="3" />
+        </svg>
+      </a>
+      <button id="menu-toggle" class="menu-toggle" aria-label="Toggle mobile menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div id="mobile-menu" class="mobile-menu" aria-hidden="true">
+      <ul role="list">
+        <li><a href="#about" class="mobile-nav-link">About</a></li>
+        <li><a href="#skills" class="mobile-nav-link">Skills</a></li>
+        <li><a href="#projects" class="mobile-nav-link">Projects</a></li>
+        <li><a href="#experience" class="mobile-nav-link">Experience</a></li>
+        <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
+        <li><a href="assets/resume.pdf" download class="mobile-nav-link">Download Resume</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ====== HERO SECTION ====== -->
+  <section id="hero" aria-label="Hero">
+    <!-- Particle Canvas -->
+    <canvas id="hero-canvas" aria-hidden="true"></canvas>
+    <!-- Background Grid -->
+    <div class="hero-grid" aria-hidden="true"></div>
+
+    <div class="hero-inner">
+      <!-- Left: Text -->
+      <div class="hero-text" role="main">
+        <!-- Open to Work Badge -->
+        <div class="otw-badge" aria-label="Status: Open to work">
+          <span class="otw-dot" aria-hidden="true"></span>
+          OPEN TO WORK
+        </div>
+
+        <p class="hero-greeting" aria-hidden="true">Hi, I'm</p>
+        <h1 class="hero-name" id="hero-name" aria-label="Ajay Sonawane">
+          <span class="char-reveal">Ajay Sonawane</span>
+        </h1>
+        <h2 class="hero-title">
+          <span class="line-reveal">Python Developer</span><br />
+          <span class="line-reveal delay-1">Building Backend Systems &amp;</span><br />
+          <span class="line-reveal delay-2">Intelligent Applications</span>
+        </h2>
+        <p class="hero-desc line-reveal delay-3">
+          Python Developer focused on Flask, FastAPI, REST APIs,<br class="desktop-break" />
+          MySQL and AI/ML fundamentals — from Pune, Maharashtra.
+        </p>
+
+        <div class="hero-actions line-reveal delay-4">
+          <a href="#projects" class="btn-primary magnetic" data-text="View My Work">
+            <span>View My Work</span>
+            <div class="btn-glow"></div>
+          </a>
+          <a href="assets/resume.pdf" download class="btn-secondary magnetic">
+            <span>Download Resume</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+              <polyline points="7 10 12 15 17 10" />
+              <line x1="12" y1="15" x2="12" y2="3" />
+            </svg>
+          </a>
+        </div>
+
+        <div class="hero-social line-reveal delay-5" aria-label="Social links">
+          <a href="https://github.com/AjaySonawane007" target="_blank" rel="noopener noreferrer" class="social-link"
+            aria-label="GitHub profile">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path
+                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+            </svg>
+            <span>GitHub</span>
+          </a>
+          <a href="https://www.linkedin.com/in/ajaysonawane7/" target="_blank" rel="noopener noreferrer"
+            class="social-link" aria-label="LinkedIn profile">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path
+                d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+            </svg>
+            <span>LinkedIn</span>
+          </a>
+          <a href="mailto:ajaysonawane405050@gmail.com" class="social-link" aria-label="Send email">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+              <polyline points="22,6 12,13 2,6" />
+            </svg>
+            <span>Email</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Right: Profile Image -->
+      <div class="hero-image-wrap" id="profile-tilt" aria-hidden="true">
+        <div class="profile-frame">
+          <div class="frame-orbit orbit-1"></div>
+          <div class="frame-orbit orbit-2"></div>
+          <div class="frame-orbit orbit-3"></div>
+          <div class="profile-glow"></div>
+          <div class="profile-img-container">
+            <img src="assets/profile.png" alt="Ajay Sonawane - Python Developer" class="profile-img" id="profile-img" />
+            <div class="profile-img-overlay"></div>
+          </div>
+          <!-- Tech pills floating around -->
+          <div class="tech-float" style="--x:-120px;--y:-80px;--delay:0s">Python</div>
+          <div class="tech-float" style="--x:110px;--y:-60px;--delay:0.3s">FastAPI</div>
+          <div class="tech-float" style="--x:-100px;--y:90px;--delay:0.6s">Flask</div>
+          <div class="tech-float" style="--x:100px;--y:80px;--delay:0.9s">MySQL</div>
+          <div class="tech-float" style="--x:0px;--y:-120px;--delay:1.2s">AI/ML</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="scroll-indicator" aria-label="Scroll down">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ====== ABOUT SECTION ====== -->
+  <section id="about" aria-label="About me">
+    <div class="container">
+      <div class="section-tag reveal">About</div>
+      <h2 class="section-title reveal">Turning Ideas Into<br /><em>Working Software</em></h2>
+
+      <div class="about-grid">
+        <!-- Text -->
+        <div class="about-text reveal">
+          <p>
+            I'm <strong>Ajay Sonawane</strong>, a Python Developer from Pune, Maharashtra.
+            I build backend systems using <strong>Flask</strong> and <strong>FastAPI</strong>,
+            design clean <strong>REST APIs</strong>, and work with <strong>MySQL</strong>
+            for reliable data storage.
+          </p>
+          <p>
+            My work spans full-stack application development — from architecting database schemas
+            to building user-facing features. I manage code with <strong>Git &amp; GitHub</strong>
+            and actively explore <strong>AI &amp; ML</strong> to build intelligent systems.
+          </p>
+          <p>
+            During my internship at Incubators Systems Pvt. Ltd., I worked hands-on with
+            <strong>IoT &amp; Robotics</strong> — programming ESP32, Arduino, and Raspberry Pi
+            systems and integrating MQTT/HTTP protocols.
+          </p>
+          <div class="about-facts">
+            <div class="fact"><span class="fact-label">Location</span><span>Pune, Maharashtra, India</span></div>
+            <div class="fact"><span class="fact-label">Focus</span><span>Python, Backend, APIs</span></div>
+            <div class="fact"><span class="fact-label">Status</span><span class="status-open">Open to Work</span></div>
+          </div>
+        </div>
+
+        <!-- Skill Bars -->
+        <div class="skill-bars reveal">
+          <div class="skill-item">
+            <div class="skill-header"><span>Python</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="1.5" aria-hidden="true">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z" />
+              </svg></div>
+            <div class="skill-bar">
+              <div class="skill-fill" data-width="92%"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-header"><span>Backend (Flask / FastAPI)</span></div>
+            <div class="skill-bar">
+              <div class="skill-fill" data-width="85%"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-header"><span>REST APIs &amp; Databases</span></div>
+            <div class="skill-bar">
+              <div class="skill-fill" data-width="82%"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-header"><span>Git / Version Control</span></div>
+            <div class="skill-bar">
+              <div class="skill-fill" data-width="78%"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-header"><span>AI / ML Fundamentals</span></div>
+            <div class="skill-bar">
+              <div class="skill-fill" data-width="65%"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-header"><span>IoT &amp; Embedded Systems</span></div>
+            <div class="skill-bar">
+              <div class="skill-fill" data-width="60%"></div>
+            </div>
+          </div>
+          <p class="skill-note">* Visual representation of relative experience — not exact percentages</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== TECH STACK SECTION ====== -->
+  <section id="skills" aria-label="Technology stack">
+    <div class="container">
+      <div class="section-tag reveal">Tech Stack</div>
+      <h2 class="section-title reveal">Technology <em>Universe</em></h2>
+      <p class="section-subtitle reveal">Tools and technologies I work with regularly</p>
+
+      <!-- Category Tabs -->
+      <div class="tech-tabs reveal" role="tablist" aria-label="Technology categories">
+        <button class="tech-tab active" data-tab="all" role="tab" aria-selected="true">All</button>
+        <button class="tech-tab" data-tab="programming" role="tab" aria-selected="false">Programming</button>
+        <button class="tech-tab" data-tab="backend" role="tab" aria-selected="false">Backend</button>
+        <button class="tech-tab" data-tab="database" role="tab" aria-selected="false">Database</button>
+        <button class="tech-tab" data-tab="libraries" role="tab" aria-selected="false">Libraries</button>
+        <button class="tech-tab" data-tab="aiml" role="tab" aria-selected="false">AI/ML</button>
+        <button class="tech-tab" data-tab="tools" role="tab" aria-selected="false">Tools</button>
+      </div>
+
+      <div class="tech-grid" id="tech-grid" role="tabpanel">
+        <!-- Programming -->
+        <div class="tech-card reveal" data-category="programming" tabindex="0">
+          <div class="tech-icon py-icon">🐍</div>
+          <div class="tech-name">Python</div>
+          <div class="tech-desc">Primary language for backend and scripting</div>
+          <div class="tech-glow"></div>
+        </div>
+        <div class="tech-card reveal" data-category="programming" tabindex="0">
+          <div class="tech-icon">🗄️</div>
+          <div class="tech-name">SQL</div>
+          <div class="tech-desc">Structured query language for databases</div>
+          <div class="tech-glow"></div>
+        </div>
+        <div class="tech-card reveal" data-category="programming" tabindex="0">
+          <div class="tech-icon">🌐</div>
+          <div class="tech-name">HTML</div>
+          <div class="tech-desc">Semantic web markup</div>
+          <div class="tech-glow"></div>
+        </div>
+        <div class="tech-card reveal" data-category="programming" tabindex="0">
+          <div class="tech-icon">🎨</div>
+          <div class="tech-name">CSS</div>
+          <div class="tech-desc">UI styling and responsive design</div>
+          <div class="tech-glow"></div>
+        </div>
+        <div class="tech-card reveal" data-category="programming" tabindex="0">
+          <div class="tech-icon">⚡</div>
+          <div class="tech-name">JavaScript</div>
+          <div class="tech-desc">Frontend interactivity</div>
+          <div class="tech-glow"></div>
+        </div>
+        <!-- Backend -->
+        <div class="tech-card reveal" data-category="backend" tabindex="0">
+          <div class="tech-icon">🔥</div>
+          <div class="tech-name">Flask</div>
+          <div class="tech-desc">Lightweight Python web framework</div>
+          <div class="tech-glow"></div>
+        </div>
+        <div class="tech-card reveal" data-category="backend" tabindex="0">
+          <div class="tech-icon">⚡</div>
+          <div class="tech-name">FastAPI</div>
+          <div class="tech-desc">High-performance async API framework</div>
+          <div class="tech-glow"></div>
+        </div>
+        <!-- Database -->
+        <div class="tech-card reveal" data-category="database" tabindex="0">
+          <div class="tech-icon">🗃️</div>
+          <div class="tech-name">MySQL</div>
+          <div class="tech-desc">Relational database management system</div>
+          <div class="tech-glow"></div>
+        </div>
+        <div class="tech-card reveal" data-category="database" tabindex="0">
+          <div class="tech-icon">📦</div>
+          <div class="tech-name">SQLite</div>
+          <div class="tech-desc">Lightweight embedded database</div>
+          <div class="tech-glow"></div>
+        </div>
+        <!-- Libraries -->
+        <div class="tech-card reveal" data-category="libraries" tabindex="0">
+          <div class="tech-icon">🔢</div>
+          <div class="tech-name">NumPy</div>
+          <div class="tech-desc">Numerical computing in Python</div>
+          <div class="tech-glow"></div>
+        </div>
+        <div class="tech-card reveal" data-category="libraries" tabindex="0">
+          <div class="tech-icon">🐼</div>
+          <div class="tech-name">Pandas</div>
+          <div class="tech-desc">Data analysis and manipulation</div>
+          <div class="tech-glow"></div>
+        </div>
+        <div class="tech-card reveal" data-category="libraries" tabindex="0">
+          <div class="tech-icon">📊</div>
+          <div class="tech-name">Matplotlib</div>
+          <div class="tech-desc">Data visualization library</div>
+          <div class="tech-glow"></div>
+        </div>
+        <div class="tech-card reveal" data-category="libraries" tabindex="0">
+          <div class="tech-icon">📈</div>
+          <div class="tech-name">Seaborn</div>
+          <div class="tech-desc">Statistical data visualization</div>
+          <div class="tech-glow"></div>
+        </div>
+        <!-- AI/ML -->
+        <div class="tech-card reveal" data-category="aiml" tabindex="0">
+          <div class="tech-icon">🧠</div>
+          <div class="tech-name">Machine Learning</div>
+          <div class="tech-desc">Predictive modeling and pattern recognition</div>
+          <div class="tech-glow"></div>
+        </div>
+        <div class="tech-card reveal" data-category="aiml" tabindex="0">
+          <div class="tech-icon">💬</div>
+          <div class="tech-name">NLP</div>
+          <div class="tech-desc">Natural language processing</div>
+          <div class="tech-glow"></div>
+        </div>
+        <div class="tech-card reveal" data-category="aiml" tabindex="0">
+          <div class="tech-icon">🤖</div>
+          <div class="tech-name">LLM / RAG</div>
+          <div class="tech-desc">Large language models and retrieval systems</div>
+          <div class="tech-glow"></div>
+        </div>
+        <!-- Tools -->
+        <div class="tech-card reveal" data-category="tools" tabindex="0">
+          <div class="tech-icon">🔧</div>
+          <div class="tech-name">Git</div>
+          <div class="tech-desc">Version control system</div>
+          <div class="tech-glow"></div>
+        </div>
+        <div class="tech-card reveal" data-category="tools" tabindex="0">
+          <div class="tech-icon">🐙</div>
+          <div class="tech-name">GitHub</div>
+          <div class="tech-desc">Code hosting and collaboration</div>
+          <div class="tech-glow"></div>
+        </div>
+        <div class="tech-card reveal" data-category="tools" tabindex="0">
+          <div class="tech-icon">📮</div>
+          <div class="tech-name">Postman</div>
+          <div class="tech-desc">API testing and documentation</div>
+          <div class="tech-glow"></div>
+        </div>
+        <div class="tech-card reveal" data-category="tools" tabindex="0">
+          <div class="tech-icon">📋</div>
+          <div class="tech-name">Swagger</div>
+          <div class="tech-desc">API documentation interface</div>
+          <div class="tech-glow"></div>
+        </div>
+        <div class="tech-card reveal" data-category="tools" tabindex="0">
+          <div class="tech-icon">💻</div>
+          <div class="tech-name">VS Code</div>
+          <div class="tech-desc">Primary code editor</div>
+          <div class="tech-glow"></div>
+        </div>
+        <div class="tech-card reveal" data-category="tools" tabindex="0">
+          <div class="tech-icon">🔬</div>
+          <div class="tech-name">Jupyter Notebook</div>
+          <div class="tech-desc">Interactive Python notebook for ML</div>
+          <div class="tech-glow"></div>
+        </div>
+        <div class="tech-card reveal" data-category="tools" tabindex="0">
+          <div class="tech-icon">🐧</div>
+          <div class="tech-name">Ubuntu</div>
+          <div class="tech-desc">Linux development environment</div>
+          <div class="tech-glow"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== PROJECTS SECTION ====== -->
+  <section id="projects" aria-label="Projects">
+    <div class="container">
+      <div class="section-tag reveal">Projects</div>
+      <h2 class="section-title reveal">Things I've <em>Built</em></h2>
+      <p class="section-subtitle reveal">A selection of projects that demonstrate my work</p>
+
+      <div class="projects-grid">
+        <!-- Project 01 -->
+        <article class="project-card reveal" id="project-1" tabindex="0" role="button"
+          aria-label="Open Job Portal System case study" data-project="jobportal">
+          <div class="project-number">01</div>
+          <div class="project-visual">
+            <div class="project-bg" style="--grad: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%)">
+              <div class="project-pattern">
+                <div class="p-circle"></div>
+                <div class="p-circle"></div>
+                <div class="p-circle"></div>
+              </div>
+              <div class="project-code-preview" aria-hidden="true">
+                <pre><code><span class="c-kw">@app</span>.route(<span class="c-str">'/jobs'</span>)
+<span class="c-kw">def</span> list_jobs():
+    jobs = Job.query.<span class="c-fn">all</span>()
+    <span class="c-kw">return</span> render_template(
+        <span class="c-str">'jobs.html'</span>, jobs=jobs
+    )</code></pre>
+              </div>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-tags">
+              <span class="tag">Python</span><span class="tag">Flask</span>
+              <span class="tag">MySQL</span><span class="tag">HTML/CSS/JS</span>
+            </div>
+            <h3 class="project-title">Job Portal System</h3>
+            <p class="project-desc">A full-featured job portal supporting Admin, Recruiter, and Job Seeker roles with
+              role-based authentication and comprehensive dashboards.</p>
+            <div class="project-features">
+              <span>Role-based Auth</span><span>Job Posting</span><span>Resume Upload</span><span>CSV/PDF Reports</span>
+            </div>
+            <div class="project-actions">
+              <a href="https://github.com/AjaySonawane007" target="_blank" rel="noopener noreferrer" class="project-btn"
+                onclick="event.stopPropagation()">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path
+                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                </svg>
+                GitHub
+              </a>
+              <button class="project-btn-outline" onclick="openModal('jobportal', event)">Case Study →</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 02 -->
+        <article class="project-card reveal" id="project-2" tabindex="0" role="button"
+          aria-label="Open Student Record Management System case study" data-project="student">
+          <div class="project-number">02</div>
+          <div class="project-visual">
+            <div class="project-bg" style="--grad: linear-gradient(135deg, #0d1117 0%, #161b22 50%, #1c2526 100%)">
+              <div class="project-pattern">
+                <div class="p-square"></div>
+                <div class="p-square"></div>
+                <div class="p-square"></div>
+              </div>
+              <div class="project-code-preview" aria-hidden="true">
+                <pre><code><span class="c-kw">@router</span>.post(<span class="c-str">"/students"</span>)
+<span class="c-kw">async def</span> create_student(
+    s: StudentCreate, 
+    db: Session = Depends(get_db)
+):
+    <span class="c-kw">return</span> crud.<span class="c-fn">create</span>(db, s)</code></pre>
+              </div>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-tags">
+              <span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">MySQL</span>
+            </div>
+            <h3 class="project-title">Student Record Management</h3>
+            <p class="project-desc">A CRUD-based student record management application with persistent MySQL storage and
+              a high-performance FastAPI backend.</p>
+            <div class="project-features">
+              <span>CRUD Operations</span><span>FastAPI Backend</span><span>MySQL Storage</span><span>REST APIs</span>
+            </div>
+            <div class="project-actions">
+              <a href="https://github.com/AjaySonawane007" target="_blank" rel="noopener noreferrer" class="project-btn"
+                onclick="event.stopPropagation()">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path
+                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                </svg>
+                GitHub
+              </a>
+              <button class="project-btn-outline" onclick="openModal('student', event)">Case Study →</button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Project Modal -->
+  <div id="project-modal" class="modal-overlay" aria-modal="true" role="dialog" aria-label="Project case study" hidden>
+    <div class="modal-content">
+      <button class="modal-close" id="modal-close" aria-label="Close modal">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <line x1="18" y1="6" x2="6" y2="18" />
+          <line x1="6" y1="6" x2="18" y2="18" />
+        </svg>
+      </button>
+      <div id="modal-body"></div>
+    </div>
+  </div>
+
+  <!-- ====== EXPERIENCE / INTERNSHIP SECTION ====== -->
+  <section id="experience" aria-label="Internship experience">
+    <div class="container">
+      <div class="section-tag reveal">Experience</div>
+      <h2 class="section-title reveal">Hands-On <em>Experience</em></h2>
+
+      <div class="timeline">
+        <div class="timeline-line" aria-hidden="true"></div>
+        <div class="timeline-item reveal">
+          <div class="timeline-date">2026</div>
+          <div class="timeline-dot" aria-hidden="true"></div>
+          <div class="timeline-content">
+            <div class="timeline-badge">Internship</div>
+            <h3 class="timeline-title">IoT &amp; Robotics Intern</h3>
+            <div class="timeline-company">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <line x1="22" y1="2" x2="11" y2="13" />
+                <polygon points="22 2 15 22 11 13 2 9 22 2" />
+              </svg>
+              Incubators Systems Pvt. Ltd., Pune
+            </div>
+            <p class="timeline-desc">
+              Worked hands-on with IoT and robotics systems — programming microcontrollers,
+              setting up communication protocols, and building control interfaces. Also explored
+              drone kinematics and autonomous system control.
+            </p>
+            <div class="timeline-tech-grid">
+              <div class="timeline-tech-group">
+                <span class="tech-group-label">Hardware</span>
+                <div class="tech-tags">
+                  <span class="tech-tag">ESP32</span>
+                  <span class="tech-tag">Arduino</span>
+                  <span class="tech-tag">Raspberry Pi</span>
+                </div>
+              </div>
+              <div class="timeline-tech-group">
+                <span class="tech-group-label">Protocols</span>
+                <div class="tech-tags">
+                  <span class="tech-tag">MQTT</span>
+                  <span class="tech-tag">HTTP</span>
+                </div>
+              </div>
+              <div class="timeline-tech-group">
+                <span class="tech-group-label">Software & Concepts</span>
+                <div class="tech-tags">
+                  <span class="tech-tag">Flutter</span>
+                  <span class="tech-tag">Streamlit</span>
+                  <span class="tech-tag">Kinematics</span>
+                  <span class="tech-tag">Drone Systems</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== EDUCATION SECTION ====== -->
+  <section id="education" aria-label="Education">
+    <div class="container">
+      <div class="section-tag reveal">Education</div>
+      <h2 class="section-title reveal">Academic <em>Foundation</em></h2>
+
+      <div class="edu-grid">
+        <div class="edu-card reveal">
+          <div class="edu-year">2023 – 2026</div>
+          <div class="edu-icon" aria-hidden="true">🎓</div>
+          <h3 class="edu-degree">Bachelor of Business Administration<br /><span>(Computer Applications)</span></h3>
+          <div class="edu-institution">Sinhgad College of Science, Pune</div>
+          <div class="edu-university">Savitribai Phule Pune University</div>
+          <div class="edu-grade">
+            <span class="grade-label">CGPA</span>
+            <span class="grade-value">8.01 / 10</span>
+          </div>
+        </div>
+
+        <div class="edu-card reveal">
+          <div class="edu-year">2021 – 2023</div>
+          <div class="edu-icon" aria-hidden="true">📚</div>
+          <h3 class="edu-degree">HSC – Science</h3>
+          <div class="edu-institution">N. H. Ranka Jr. College, Bodwad</div>
+          <div class="edu-university">Maharashtra State Board</div>
+          <div class="edu-grade">
+            <span class="grade-label">Percentage</span>
+            <span class="grade-value">61.33%</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== CERTIFICATION SECTION ====== -->
+  <section id="certification" aria-label="Certifications">
+    <div class="container">
+      <div class="section-tag reveal">Certification</div>
+      <h2 class="section-title reveal">Verified <em>Skills</em></h2>
+
+      <div class="cert-card reveal" tabindex="0">
+        <div class="cert-shimmer"></div>
+        <div class="cert-header">
+          <div class="cert-badge" aria-hidden="true">✓</div>
+          <div>
+            <div class="cert-issuer">C2W Group</div>
+            <div class="cert-date">May 2026</div>
+          </div>
+        </div>
+        <h3 class="cert-title">Python Programming Certification</h3>
+        <div class="cert-topics">
+          <span>Python Fundamentals</span>
+          <span>Object-Oriented Programming</span>
+          <span>File Handling</span>
+          <span>Exception Handling</span>
+          <span>Functions &amp; Modules</span>
+          <span>Data Structures</span>
+        </div>
+        <div class="cert-decoration" aria-hidden="true">
+          <div class="cert-line"></div>
+          <div class="cert-seal">CERTIFIED</div>
+          <div class="cert-line"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== TERMINAL SECTION ====== -->
+  <section id="terminal" aria-label="Currently building">
+    <div class="container">
+      <div class="section-tag reveal">Developer</div>
+      <h2 class="section-title reveal">Currently <em>Building</em></h2>
+
+      <div class="terminal-window reveal" role="region" aria-label="Developer terminal interface">
+        <div class="terminal-bar">
+          <div class="terminal-controls" aria-hidden="true">
+            <span class="t-btn t-red"></span>
+            <span class="t-btn t-yellow"></span>
+            <span class="t-btn t-green"></span>
+          </div>
+          <div class="terminal-title">ajay@dev ~ zsh</div>
+        </div>
+        <div class="terminal-body" id="terminal-body" aria-live="polite">
+          <!-- Typed dynamically -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== CAREER ROADMAP SECTION ====== -->
+  <section id="roadmap" aria-label="Career roadmap">
+    <div class="container">
+      <div class="section-tag reveal">Vision</div>
+      <h2 class="section-title reveal">Where I'm <em>Heading</em></h2>
+      <p class="section-subtitle reveal">"Building reliable backend systems today, exploring intelligent applications
+        tomorrow."</p>
+
+      <div class="roadmap-flow">
+        <div class="roadmap-step reveal active" style="--delay:0s">
+          <div class="step-icon">🐍</div>
+          <div class="step-content">
+            <h4>Python</h4>
+            <p>Core language mastery</p>
+          </div>
+        </div>
+        <div class="roadmap-connector reveal" aria-hidden="true"></div>
+        <div class="roadmap-step reveal" style="--delay:0.1s">
+          <div class="step-icon">🔥</div>
+          <div class="step-content">
+            <h4>Backend Development</h4>
+            <p>Flask, FastAPI systems</p>
+          </div>
+        </div>
+        <div class="roadmap-connector reveal" aria-hidden="true"></div>
+        <div class="roadmap-step reveal" style="--delay:0.2s">
+          <div class="step-icon">🔌</div>
+          <div class="step-content">
+            <h4>APIs &amp; Databases</h4>
+            <p>REST APIs, MySQL, architecture</p>
+          </div>
+        </div>
+        <div class="roadmap-connector reveal" aria-hidden="true"></div>
+        <div class="roadmap-step reveal" style="--delay:0.3s">
+          <div class="step-icon">🧠</div>
+          <div class="step-content">
+            <h4>AI / ML</h4>
+            <p>Machine learning, NLP, LLMs</p>
+          </div>
+        </div>
+        <div class="roadmap-connector reveal" aria-hidden="true"></div>
+        <div class="roadmap-step reveal" style="--delay:0.4s">
+          <div class="step-icon">🚀</div>
+          <div class="step-content">
+            <h4>Intelligent Applications</h4>
+            <p>AI-powered products</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== CONTACT SECTION ====== -->
+  <section id="contact" aria-label="Contact">
+    <div class="container">
+      <div class="section-tag reveal">Contact</div>
+      <h2 class="section-title reveal contact-heading">Let's Build<br /><em>Something Useful.</em></h2>
+      <p class="section-subtitle reveal">
+        I'm currently looking for opportunities as a Python Developer, Backend Developer, or Software Engineer.
+      </p>
+
+      <div class="contact-grid">
+        <!-- Contact Links -->
+        <div class="contact-links reveal">
+          <a href="mailto:ajaysonawane405050@gmail.com" class="contact-card" aria-label="Send email to Ajay">
+            <div class="contact-card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                <polyline points="22,6 12,13 2,6" />
+              </svg>
+            </div>
+            <div class="contact-card-info">
+              <span class="contact-label">Email</span>
+              <span class="contact-value">ajaysonawane405050@gmail.com</span>
+            </div>
+            <div class="contact-arrow">→</div>
+          </a>
+          <a href="https://linkedin.com/in/ajaysonawane7" target="_blank" rel="noopener noreferrer" class="contact-card"
+            aria-label="Visit LinkedIn profile">
+            <div class="contact-card-icon">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path
+                  d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+              </svg>
+            </div>
+            <div class="contact-card-info">
+              <span class="contact-label">LinkedIn</span>
+              <span class="contact-value">linkedin.com/in/ajaysonawane7</span>
+            </div>
+            <div class="contact-arrow">→</div>
+          </a>
+          <a href="https://github.com/AjaySonawane007" target="_blank" rel="noopener noreferrer" class="contact-card"
+            aria-label="Visit GitHub profile">
+            <div class="contact-card-icon">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path
+                  d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+              </svg>
+            </div>
+            <div class="contact-card-info">
+              <span class="contact-label">GitHub</span>
+              <span class="contact-value">github.com/AjaySonawane007</span>
+            </div>
+            <div class="contact-arrow">→</div>
+          </a>
+        </div>
+
+        <!-- Contact Form -->
+        <form class="contact-form reveal" id="contact-form" novalidate aria-label="Contact form">
+          <div class="form-group">
+            <label for="cf-name">Name</label>
+            <input type="text" id="cf-name" name="name" placeholder="Your name" required autocomplete="name" />
+            <span class="field-error" id="name-error" role="alert"></span>
+          </div>
+          <div class="form-group">
+            <label for="cf-email">Email</label>
+            <input type="email" id="cf-email" name="email" placeholder="your@email.com" required autocomplete="email" />
+            <span class="field-error" id="email-error" role="alert"></span>
+          </div>
+          <div class="form-group">
+            <label for="cf-message">Message</label>
+            <textarea id="cf-message" name="message" placeholder="Tell me about the opportunity..." rows="5"
+              required></textarea>
+            <span class="field-error" id="message-error" role="alert"></span>
+          </div>
+          <button type="submit" class="form-submit magnetic" id="form-submit">
+            <span class="submit-text">Send Message</span>
+            <span class="submit-icon">→</span>
+            <div class="btn-glow"></div>
+          </button>
+          <div class="form-success" id="form-success" aria-live="polite" hidden>
+            ✓ Message sent! I'll get back to you soon.
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== FOOTER ====== -->
+  <footer id="footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-logo">
+        <span class="logo-bracket">&lt;</span>AS<span class="logo-bracket">/&gt;</span>
+      </div>
+      <p class="footer-copy">Designed &amp; Built by <strong>Ajay Sonawane</strong> · <span id="footer-year"></span></p>
+      <div class="footer-links" aria-label="Footer social links">
+        <a href="https://github.com/AjaySonawane007" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path
+              d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+          </svg>
+        </a>
+        <a href="https://linkedin.com/in/ajaysonawane7" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path
+              d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+          </svg>
+        </a>
+        <a href="mailto:ajaysonawane405050@gmail.com" aria-label="Email">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+            <polyline points="22,6 12,13 2,6" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Main JS -->
+  <script src="js/main.js"></script>
+</body>
+
+</html>
